@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="books_subreport"
+              pageWidth="555" pageHeight="600" columnWidth="555"
+              leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0"
+              whenNoDataType="AllSectionsNoDetail">
+
+    <field name="cipher" class="java.lang.String"/>
+    <field name="title" class="java.lang.String"/>
+    <field name="author" class="java.lang.String"/>
+    <field name="year" class="java.lang.Integer"/>
+    <field name="genre" class="java.lang.String"/>
+    <field name="status" class="java.lang.String"/>
+
+    <columnHeader>
+        <band height="15">
+            <staticText><reportElement x="0" y="0" width="60" height="15"/><box><pen lineWidth="0.5"/></box><textElement><font fontName="DejaVu Sans" size="9" isBold="true"/></textElement><text><![CDATA[Шифр]]></text></staticText>
+            <staticText><reportElement x="60" y="0" width="180" height="15"/><box><pen lineWidth="0.5"/></box><textElement><font fontName="DejaVu Sans" size="9" isBold="true"/></textElement><text><![CDATA[Название]]></text></staticText>
+            <staticText><reportElement x="240" y="0" width="130" height="15"/><box><pen lineWidth="0.5"/></box><textElement><font fontName="DejaVu Sans" size="9" isBold="true"/></textElement><text><![CDATA[Автор]]></text></staticText>
+            <staticText><reportElement x="370" y="0" width="50" height="15"/><box><pen lineWidth="0.5"/></box><textElement><font fontName="DejaVu Sans" size="9" isBold="true"/></textElement><text><![CDATA[Год]]></text></staticText>
+            <staticText><reportElement x="420" y="0" width="75" height="15"/><box><pen lineWidth="0.5"/></box><textElement><font fontName="DejaVu Sans" size="9" isBold="true"/></textElement><text><![CDATA[Жанр]]></text></staticText>
+            <staticText><reportElement x="495" y="0" width="60" height="15"/><box><pen lineWidth="0.5"/></box><textElement><font fontName="DejaVu Sans" size="9" isBold="true"/></textElement><text><![CDATA[Статус]]></text></staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="15">
+            <textField><reportElement x="0" y="0" width="60" height="15"/><box><pen lineWidth="0.5"/></box><textElement><font fontName="DejaVu Sans" size="8"/></textElement><textFieldExpression><![CDATA[$F{cipher}]]></textFieldExpression></textField>
+            <textField><reportElement x="60" y="0" width="180" height="15"/><box><pen lineWidth="0.5"/></box><textElement><font fontName="DejaVu Sans" size="8"/></textElement><textFieldExpression><![CDATA[$F{title}]]></textFieldExpression></textField>
+            <textField><reportElement x="240" y="0" width="130" height="15"/><box><pen lineWidth="0.5"/></box><textElement><font fontName="DejaVu Sans" size="8"/></textElement><textFieldExpression><![CDATA[$F{author}]]></textFieldExpression></textField>
+            <textField><reportElement x="370" y="0" width="50" height="15"/><box><pen lineWidth="0.5"/></box><textElement textAlignment="Center"><font fontName="DejaVu Sans" size="8"/></textElement><textFieldExpression><![CDATA[$F{year}]]></textFieldExpression></textField>
+            <textField><reportElement x="420" y="0" width="75" height="15"/><box><pen lineWidth="0.5"/></box><textElement><font fontName="DejaVu Sans" size="8"/></textElement><textFieldExpression><![CDATA[$F{genre}]]></textFieldExpression></textField>
+            <textField><reportElement x="495" y="0" width="60" height="15"/><box><pen lineWidth="0.5"/></box><textElement textAlignment="Center"><font fontName="DejaVu Sans" size="8"/></textElement><textFieldExpression><![CDATA[$F{status}]]></textFieldExpression></textField>
+        </band>
+    </detail>
+</jasperReport>
